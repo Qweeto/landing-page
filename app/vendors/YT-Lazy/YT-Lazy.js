@@ -13,7 +13,7 @@
         const iframe = document.createElement('iframe');
         iframe.setAttribute('frameborder', '0');
         iframe.setAttribute('allowfullscreen', '');
-        iframe.src = `//www.youtube.com/embed/${ currentYT.dataset.embed }?rel=0&showinfo=0&autoplay=1`;
+        iframe.src = `//www.youtube.com/embed/${ currentYT.dataset.embed }?rel=0&showinfo=0&autoplay=1&html5=1`;
         currentYT.innerHTML = '';
         currentYT.appendChild(iframe);
       });

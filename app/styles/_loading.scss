@@ -1,58 +1,74 @@
 @import "colors";
 @import "animations";
 
-body[loading] {
+body {
 
-  .loading-container {
-    position: fixed;
-    display: block;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    z-index: 101;
-    background-color: rgba($black-color, 0.5);
-    transition: all 1s;
+  &[loading] {
+    background-color: $black-color;
 
-    .loading {
-      position: absolute;
-      z-index: 9;
-      top: 50%;
-      left: 50%;
-      transform: translateY(-50%);
-      height: 26px;
-      width: 10px;
-      border-radius: 10%;
-      background: $white-color;
-      animation: fade2 1s infinite;
-      transition: background .2s;
-
-      &:after,
-      &:before {
-        position: absolute;
-        display: block;
-        content: '';
-        height: 25px;
-        width: 10px;
-        background: $white-color;
-        top: 50%;
-        transform: translateY(-50%);
-        left: -15px;
-        border-radius: 10%;
-        animation: fade1 1s infinite;
-        transition: background .2s;
-      }
-
-      &:before {
-        left: 15px;
-        animation: fade3 1s infinite;
-      }
-
+    .loading-container {
+      display: block;
     }
+
+    main {
+      display: none;
+    }
+
   }
 
-  img {
-    display: none;
+  &:not(loading) {
+
+    .loading-container {
+      display: none;
+    }
+
+  }
+
+}
+
+.loading-container {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 101;
+  transition: all 1s;
+}
+
+.loading {
+  position: absolute;
+  z-index: 9;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+  height: 26px;
+  width: 10px;
+  border-radius: 10%;
+  background: $white-color;
+  animation: fade2 1s infinite;
+  transition: background .2s;
+
+  &:after,
+  &:before {
+    position: absolute;
+    display: block;
+    content: '';
+    height: 26px;
+    width: 10px;
+    background: $white-color;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -15px;
+    border-radius: 10%;
+    animation: fade1 1s infinite;
+    transition: background .2s;
+  }
+
+  &:before {
+    left: 15px;
+    animation: fade3 1s infinite;
   }
 
 }

@@ -26,26 +26,23 @@ img.full-image-cover {
   object-fit: contain;
   left: 0;
   top: 0;
-}
-
-.fill-inside-content {
   margin: 0;
 }
 
 .append-buttons {
   text-align: center;
   margin-top: 20px;
-}
 
-.append-buttons a {
-  display: inline-block;
-  border: 1px solid $secondary2-color;
-  color: $secondary2-color;
-  text-decoration: none;
-  padding: 4px 10px;
-  border-radius: 4px;
-  margin: 0 10px;
-  font-size: 13px;
+  a {
+    display: inline-block;
+    border: 1px solid $secondary2-color;
+    color: $secondary2-color;
+    text-decoration: none;
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin: 0 10px;
+    font-size: 13px;
+  }
 }
 
 .text-logo {
@@ -71,6 +68,10 @@ img.full-image-cover {
     float: left;
     text-decoration: none;
     align-items: center;
+  }
+
+  span {
+    vertical-align: middle;
   }
 
   img {

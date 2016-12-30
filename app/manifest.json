@@ -6,8 +6,8 @@
   "description": "Play Anywhere",
   "start_url": "index.html",
   "display": "fullscreen",
-  "background_color": "#1f1f1f",
-  "theme_color": "#1f1f1f",
+  "background_color": "#16161d",
+  "theme_color": "#16161d",
   "orientation": "any",
   "icons": [
     {

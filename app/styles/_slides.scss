@@ -15,7 +15,7 @@
 }
 
 .slide {
-  background: hsl(0, 0%, 0%);
+  background: $black-color;
 }
 
 .slide.fp-slide.active {
@@ -31,13 +31,11 @@
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
+  background: $white-color-light;
   display: flex;
   justify-content: center;
   align-items: center;
-}
 
-.swiper-slide {
   iframe {
     width: 100%;
     height: 100%;
@@ -48,9 +46,24 @@
     left: 0;
     right: 0;
   }
+
+  .loading {
+    display: none;
+  }
+
+}
+
+.swiper-slide-active,
+.swiper-slide-next {
+
+  .loading {
+    display: block;
+  }
+
 }
 
 #fp-nav {
+
   a > span {
     @include ball-size;
     @include bullet-border($white-color-light);
@@ -67,6 +80,7 @@
     @include bullet-border();
     opacity: 1;
   }
+
 }
 
 span.swiper-pagination-bullet {
