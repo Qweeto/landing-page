@@ -63,7 +63,7 @@
 
     <page anchor="qweeto" tooltip="" class="qweeto">
       <div class="col1 light">
-        <h-text class="shake-up">Qweeto (Upcoming)</h-text>
+        <h-text class="shake-up">Qweeto</h-text>
 
         <p class="">Social travel starts here</p>
         <a href="//t.me/qweeto"
@@ -71,6 +71,10 @@
            tabindex="-1"
            rel="noopener noreferrer"
            target="_blank">Telegram channel</a>
+        <a href="//qweeto.com/"
+           title="Open Qween"
+           target="_blank">Run Qweeto
+        </a>
       </div>
       <div class="col2">
         <swiper data="{parent.parent.staticData.qweeto}"/>
