@@ -31,6 +31,7 @@ gulp.task('copy-manifests', () =>
       'app/manifest.json',
       'app/manifest.webapp',
       'app/opensearch.xml',
+      'app/sitemap.xml',
     ], {
       dot: true
     })
