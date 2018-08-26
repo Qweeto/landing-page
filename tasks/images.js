@@ -1,9 +1,9 @@
 // Optimize images
 import gulp from 'gulp';
 import gulpLoadPlugins from 'gulp-load-plugins';
+import {ROOT_DIR} from './env';
 
 const $ = gulpLoadPlugins();
-const ROOT_DIR = 'dist';
 
 gulp.task('images', () =>
   gulp

@@ -1,7 +1,6 @@
 import gulp from 'gulp';
 import firebase from 'firebase-tools';
-
-const ROOT_DIR = 'dist';
+import {ROOT_DIR} from './env';
 
 gulp.task('deploy', () =>
   firebase
@@ -11,7 +10,7 @@ gulp.task('deploy', () =>
       cwd: `../${ROOT_DIR}`
     })
     .then(() => {
-      console.log('Firebase deployed success!');
+      console.log('Firebase deploy success!');
       process.exit(0);
     })
     .catch(err => {

@@ -31,7 +31,5 @@
   },
   "extends": "eslint:recommended",
   "globals": {
-    "fullpage": true,
-    "Swiper": true
   }
 }

@@ -3,9 +3,9 @@ import gulp from 'gulp';
 import del from 'del';
 import runSequence from 'run-sequence';
 import gulpLoadPlugins from 'gulp-load-plugins';
+import {ROOT_DIR} from './tasks/env';
 
 const $ = gulpLoadPlugins();
-const ROOT_DIR = 'dist';
 
 // Clean output directory
 gulp.task('clean', () => del(['.tmp', `${ROOT_DIR}/*`, `!${ROOT_DIR}/.git`], {dot: true}));

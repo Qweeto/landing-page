@@ -1,8 +1,8 @@
 // Scan your HTML for assets & optimize them
 import gulp from 'gulp';
 import gulpLoadPlugins from 'gulp-load-plugins';
+import {ROOT_DIR} from './env';
 
-const ROOT_DIR = 'dist';
 const $ = gulpLoadPlugins();
 
 gulp.task('html', () =>

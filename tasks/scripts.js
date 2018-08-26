@@ -4,9 +4,9 @@ import webpack from 'webpack';
 import webpackStream from 'webpack-stream';
 import gulpLoadPlugins from 'gulp-load-plugins';
 import path from 'path';
+import {ROOT_DIR} from './env';
 
 const $ = gulpLoadPlugins();
-const ROOT_DIR = 'dist';
 
 gulp.task('scripts', () =>
   gulp

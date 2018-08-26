@@ -2,8 +2,12 @@
 
 ## Watch changes & automatically refresh across devices
 ```sh
-$ npm start
 $ npm serve
+```
+
+## Production start
+```sh
+$ npm start
 ```
 
 ## Serve the fully built & optimized site
