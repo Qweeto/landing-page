@@ -12,16 +12,20 @@ $fontSize: 1.074em;
     font-size: $fontSize;
   }
 
-  a {
-    display: flex;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-  }
-
   down-button {
     left: 50%;
     filter: invert(0);
   }
 
+  swiper {
+    .swiper-slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    img {
+      max-height: 256px;
+    }
+  }
 }

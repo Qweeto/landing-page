@@ -38,6 +38,7 @@
         left: 50%;
         bottom: 0;
         transform: translate3d(-50%, -50%, 0);
+        -webkit-backdrop-filter: blur(4px);
 
         &[hidden] {
           visibility: hidden;

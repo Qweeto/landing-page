@@ -1,13 +1,13 @@
 # gotois Landing Page [![Build Status](https://travis-ci.org/gotois/landing-page.svg?branch=master)](https://travis-ci.org/gotois/landing-page) [![devDependencies Status](https://david-dm.org/gotois/landing-page/dev-status.svg)](https://david-dm.org/gotois/landing-page?type=dev)
 
-## Watch changes & automatically refresh across devices
-```sh
-$ npm serve
-```
-
-## Production start
+## Compilation start
 ```sh
 $ npm start
+```
+
+## Watch changes & automatically refresh across devices
+```sh
+$ npm run serve
 ```
 
 ## Serve the fully built & optimized site

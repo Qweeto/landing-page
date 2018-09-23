@@ -29,6 +29,7 @@
         line-height: 2.2;
         width: 100%;
         border: none;
+        border-radius: 0;
         outline: none;
         font-size: 20px;
         -webkit-appearance: none;

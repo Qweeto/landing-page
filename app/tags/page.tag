@@ -3,6 +3,7 @@
   <style>
     :scope {
       display: inherit;
+      -webkit-overflow-scrolling: touch;
     }
   </style>
 
