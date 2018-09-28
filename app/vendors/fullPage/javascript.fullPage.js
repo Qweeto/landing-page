@@ -478,7 +478,7 @@
     var evts = s.split(' ');
     for (var i=0, iLen=evts.length; i<iLen; i++) {
       if (document.addEventListener) {
-        el.addEventListener(evts[i], fn, false);
+        el.addEventListener(evts[i], fn, {passive: true});
       }else{
         el.attachEvent(evts[i], fn, false); //IE 6/7/8
       }
