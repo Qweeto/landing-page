@@ -62,17 +62,19 @@
     </page>
 
     <page anchor="qweeto" tooltip="" class="qweeto">
-      <div class="col1 light">
-        <h-text class="shake-up">Qweeto</h-text>
+      <div class="col1 light" itemscope itemtype="http://schema.org/CreativeWork">
+        <h-text class="shake-up" itemprop="name">Qweeto</h-text>
 
-        <p class="">Social travel starts here</p>
+        <p class="" itemprop="description">Social travel starts here</p>
         <a href="//t.me/qweeto"
            title="Telegram channel"
            tabindex="-1"
-           rel="noopener noreferrer"
+           rel="noopener noreferrer nofollow"
            target="_blank">Telegram channel</a>
         <a href="//qweeto.com/"
-           title="Open Qween"
+           title="Open Qweeto"
+           itemprop="url"
+           rel="noopener"
            target="_blank">Run Qweeto
         </a>
       </div>
@@ -84,10 +86,10 @@
     </page>
 
     <page anchor="gamearkahold" tooltip="" class="gamearkahold">
-      <div class="col1 light">
-        <h-text class="shake-up">Arkahold</h-text>
+      <div class="col1 light" itemscope itemtype="http://schema.org/CreativeWork">
+        <h-text class="shake-up" itemprop="name">Arkahold</h-text>
 
-        <p class="">Classic oldschool minimalistic arkanoid with WebGL effects.
+        <p class="" itemprop="description">Classic oldschool minimalistic arkanoid with WebGL effects.
           20 levels, bonuses and bosses.
           3 controls: keyboard, mouse and gamepad
         </p>
@@ -104,6 +106,7 @@
              title="Star Arkahold on GitHub"
              tabindex="-1"
              rel="noopener noreferrer"
+             itemprop="url"
              target="_blank">
             <img src="images/vendors/GitHub_Logo.png"
                  alt=""/>
@@ -118,14 +121,15 @@
     </page>
 
     <page anchor="gamebotris" tooltip="" class="gamebotris">
-      <div class="col1 light">
-        <h-text class="shake-up">Botris</h-text>
-        <p>Use your mind to win!</p>
+      <div class="col1 light" itemscope itemtype="http://schema.org/CreativeWork">
+        <h-text class="shake-up" itemprop="name">Botris</h-text>
+        <p itemprop="description">Use your mind to win!</p>
         <section class="buttons">
           <a href="//play.google.com/store/apps/details?id=com.tewst.botris"
              title="Install Android Game"
              tabindex="-1"
              rel="noopener noreferrer"
+             itemprop="url"
              target="_blank">
             <img src="images/vendors/googleplay.png"
                  alt="Get it on Google Play"/>
@@ -152,15 +156,16 @@
     </page>
 
     <page anchor="prostodiary" tooltip="" class="prostodiary">
-      <div class="col1 light">
-        <h-text class="shake-up">ProstoDiary</h-text>
-        <p>Daily journal Telegram Bot Day using aes-256-ctr crypto</p>
+      <div class="col1 light" itemscope itemtype="http://schema.org/CreativeWork">
+        <h-text class="shake-up" itemprop="name">ProstoDiary</h-text>
+        <p itemprop="description">Daily journal Telegram Bot Day using aes-256-ctr crypto</p>
 
         <section class="buttons">
           <a href="//github.com/gotois/ProstoDiary_bot"
              title="Star ProstoDiary_bot on GitHub"
              tabindex="-1"
              rel="noopener noreferrer"
+             itemprop="url"
              target="_blank">
             <img src="images/vendors/GitHub_Logo.png"
                  alt=""/>

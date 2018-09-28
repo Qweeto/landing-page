@@ -87,7 +87,7 @@
   </div>
   <div class="text-container">
     <!--class: shake-up-->
-    <h3 class="description">Play&nbsp;anywhere</h3>
+    <h2 class="description">Play&nbsp;anywhere</h2>
     <p class="scroll-down-text">Scroll down for details</p>
   </div>
 

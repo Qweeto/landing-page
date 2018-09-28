@@ -1,4 +1,4 @@
-<youtube>
+<youtube itemprop="video" itemscope itemtype="http://schema.org/VideoObject">
 
   <style type="text/scss">
     @import "../styles/colors";
@@ -81,12 +81,18 @@
     }
   </style>
 
-  <div class="play-button"></div>
+  <meta itemprop="thumbnailUrl" content="{imageSrc}"/>
+  <meta itemprop="contentUrl" content="{iframeSrc}"/>
+
+  <div class="play-button" itemprop="name"></div>
 
   <script>
     import {isMobile} from '../scripts/utils/isMobile';
 
     const imageSize = ytImageSize();
+
+    this.imageSrc = `//img.youtube.com/vi/${ this.opts.url }/${ imageSize }.jpg`;
+    this.iframeSrc = `//www.youtube.com/embed/${ this.opts.url }?rel=0&showinfo=0&autoplay=1&frameborder=0&color=white&controls=0&disablekb=0&fs=0&modestbranding=1&html5=1`;
 
     this.on('mount', () => {
       const currentYT = this.root;
@@ -94,8 +100,7 @@
       const image = new Image();
       const iframe = document.createElement('iframe');
       const playButton = currentYT.querySelector('.play-button');
-
-      image.src = `//img.youtube.com/vi/${ this.opts.url }/${ imageSize }.jpg`;
+      image.src = this.imageSrc;
       image.alt = 'Show video';
       image.classList.add('cover');
       image.addEventListener('load', () => currentYT.appendChild(image));
@@ -108,7 +113,7 @@
       playButton.addEventListener('click', () => {
 
         if (!playButton.hidden) {
-          iframe.src = `//www.youtube.com/embed/${ this.opts.url }?rel=0&showinfo=0&autoplay=1&frameborder=0&color=white&controls=0&disablekb=0&fs=0&modestbranding=1&html5=1`;
+          iframe.src = this.iframeSrc;
           currentYT.insertBefore(iframe, image);
           playButton.hidden = true;
         }

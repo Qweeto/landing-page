@@ -29,6 +29,7 @@
 
     <div class="swiper-slide" each="{val, i in opts.data}" ref="slide-{i}">
       <virtual if="{val.photo}">
+        <!-- TODO: add schema.org https://yandex.ru/support/webmaster/supported-schemas/image.html -->
         <img data-src="{val.photo}"
              alt=""
              class="full-image-cover scale-up swiper-lazy"/>
