@@ -111,23 +111,21 @@
       });
 
       playButton.addEventListener('click', () => {
-
         if (!playButton.hidden) {
           iframe.src = this.iframeSrc;
           currentYT.insertBefore(iframe, image);
           playButton.hidden = true;
         }
-
       });
 
       iframe.addEventListener('load', () => {
+        image.style.display = 'none';
 
         if (isMobile()) {
           image.hidden = true;
         } else {
-          image.style.opacity = 0;
+          image.style.opacity = '0';
         }
-
       });
     });
 
