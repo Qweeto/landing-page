@@ -7,7 +7,7 @@
   <OutputEncoding>UTF-8</OutputEncoding>
   <Image height="16" width="16" type="image/x-icon">https://gotointeractive.com/favicon.ico</Image>
   <Tags>play games bot open source git web game html5 webgl canvas cocos2d</Tags>
-  <Contact>info@gotointeractive.com</Contact>
+  <Contact>support@gotointeractive.com</Contact>
   <Url type="text/html" method="GET" template="https://www.google.com/search?q={searchTerms}+site%3Agotointeractive.com&amp;hl=en"/>
   <moz:SearchForm>https://gotointeractive.com/search</moz:SearchForm>
 </OpenSearchDescription>

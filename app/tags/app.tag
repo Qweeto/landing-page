@@ -242,17 +242,18 @@
         <h-text class="text-logo-description shake-up">goto&thinsp;Interactive&nbsp;Software</h-text>
       </a>
       <submit-form class="form-container"/>
-      <social-buttons></social-buttons>
+      <social-buttons/>
 
       <footer>
         <p>All the World</p>
-        <p title="Сделать заказ">General inquiries:
-          <a href="mailto:info@gotointeractive.com"
-             title="Send email"
-             target="_top">info@gotointeractive.com</a>
+        <p>General inquiries:
+          <a href="mailto:support@gotointeractive.com"
+             title="Support"
+             target="_top">support@gotointeractive.com</a>
         </p>
         <p>
           <!--TODO: Добавить ссылку на "Войти в gotois" для коллаборации -->
+          <!--TODO: Предложить заказ/решение -->
         </p>
         <p>Work from 2014 to now</p>
       </footer>
