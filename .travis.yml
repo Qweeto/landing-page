@@ -15,7 +15,7 @@ script:
   - npm run test
   - npm run default
   - npm run deploy
+  - npm run pagespeed
 
 after_success:
-  - npm run pagespeed
   - exit 0
