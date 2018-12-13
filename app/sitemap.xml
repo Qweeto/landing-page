@@ -4,10 +4,12 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  <!-- created manually -->
 
   <url>
-    <loc>https://gotointeractive.com/</loc>
-    <lastmod>2018-08-12T09:06:44+00:00</lastmod>
+    <loc>https://tewst-landing-page.firebaseapp.com/</loc>
+    <lastmod>2018-12-13T20:41:08+00:00</lastmod>
+    <priority>1.00</priority>
   </url>
 
 </urlset>
