@@ -12,8 +12,10 @@ cache:
   - node_modules
 
 script:
+  - npm run lint
   - npm run test
-  - npm run default
+  - npm run generate
+  - npm run build
   - npm run deploy
   - npm run pagespeed
 

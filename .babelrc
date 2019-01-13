@@ -1,7 +1,3 @@
 {
-  "presets": [
-    "es2015",
-    "es2015-riot"
-  ],
   "retainLines": true
 }

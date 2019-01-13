@@ -1,0 +1,97 @@
+/* ----------- iPad mini ----------- */
+
+/* Portrait */
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (orientation: portrait)
+and (-webkit-min-device-pixel-ratio: 1) {
+  //@import "portrait";
+}
+
+/* Landscape */
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 1) {
+  //@import "landscape";
+}
+
+/* ----------- iPad 1 and 2 ----------- */
+
+/* Portrait */
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (orientation: portrait)
+and (-webkit-min-device-pixel-ratio: 1) {
+  //@import "portrait";
+}
+
+/* Landscape */
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 1) {
+  //@import "landscape";
+}
+
+/* ----------- iPad 3 and 4 ----------- */
+
+/* Portrait */
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (orientation: portrait)
+and (-webkit-min-device-pixel-ratio: 2) {
+  //@import "portrait";
+}
+
+/* Landscape */
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 2) {
+  //@import "landscape";
+}
+
+/* ----------- Galaxy Tab 10.1 ----------- */
+
+/* Portrait */
+@media
+(max-device-width: 800px)
+and (orientation: portrait) {
+  //@import "portrait";
+}
+
+/* Landscape */
+@media
+(max-device-width: 1280px)
+and (orientation: landscape) {
+  //@import "landscape";
+}
+
+/* ----------- Asus Nexus 7 ----------- */
+
+/* Portrait */
+@media screen
+and (device-width: 601px)
+and (device-height: 906px)
+and (-webkit-min-device-pixel-ratio: 1.331)
+and (-webkit-max-device-pixel-ratio: 1.332)
+and (orientation: portrait) {
+  //@import "portrait";
+}
+
+/* Landscape */
+@media screen
+and (device-width: 601px)
+and (device-height: 906px)
+and (-webkit-min-device-pixel-ratio: 1.331)
+and (-webkit-max-device-pixel-ratio: 1.332)
+and (orientation: landscape) {
+  //@import "landscape";
+}

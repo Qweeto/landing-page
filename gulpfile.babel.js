@@ -1,48 +1,35 @@
-'use strict';
-import gulp from 'gulp';
-import del from 'del';
-import runSequence from 'run-sequence';
-import gulpLoadPlugins from 'gulp-load-plugins';
-import {ROOT_DIR} from './tasks/env';
+import gulp from 'gulp'
+import firebase from 'firebase-tools'
+import { output as pagespeed } from 'psi'
 
-const $ = gulpLoadPlugins();
-
-// Clean output directory
-gulp.task('clean', () => del(['.tmp', `${ROOT_DIR}/*`, `!${ROOT_DIR}/.git`], {dot: true}));
-
-// Build production files, the default task
-gulp.task('default', ['clean'], cb =>
-  runSequence(
-    'lint',
-    'images',
-    'html',
-    'scripts',
-    'copy-manifests',
-    'generate-service-worker',
+// Run PageSpeed Insights
+gulp.task('pagespeed', cb =>
+  // Update the below URL to the public URL of your site
+  pagespeed(
+    'https://tewst-landing-page.firebaseapp.com',
+    {
+      strategy: 'mobile'
+      // By default we use the PageSpeed Insights free (no API key) tier.
+      // Use a Google Developer API key if you have one: http://goo.gl/RkN0vE
+      // key: 'YOUR_API_KEY'
+    },
     cb
   )
-);
+)
 
-gulp.task('copy-manifests', () =>
-  gulp
-    .src([
-      'app/humans.txt',
-      'app/robots.txt',
-      'app/manifest.json',
-      'app/manifest.webapp',
-      'app/opensearch.xml',
-      'app/sitemap.xml',
-    ], {
-      dot: true
+gulp.task('deploy', () =>
+  firebase
+    .deploy({
+      project: process.env.PROJECT_NAME,
+      token: process.env.FIREBASE_TOKEN,
+      cwd: `../${ROOT_DIR}`
     })
-    .pipe(gulp.dest(`${ROOT_DIR}/`))
-    .pipe($.size({title: 'copy'}))
-);
-
-try {
-  // Load custom tasks from the `tasks` directory
-  // eslint-disable-next-line
-  require('require-dir')('tasks');
-} catch (err) {
-  console.error(err);
-}
+    .then(() => {
+      console.log('Firebase deploy success!')
+      process.exit(0)
+    })
+    .catch(err => {
+      console.error(err)
+      process.exit(1)
+    })
+)
