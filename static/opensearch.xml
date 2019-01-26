@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/" xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+  <ShortName>gotois</ShortName>
+  <LongName>Search gotois</LongName>
+  <Description></Description>
+  <InputEncoding>UTF-8</InputEncoding>
+  <OutputEncoding>UTF-8</OutputEncoding>
+  <Image height="16" width="16" type="image/x-icon">https://gotointeractive.com/favicon.ico</Image>
+  <Tags></Tags>
+  <Contact>support@gotointeractive.com</Contact>
+  <Url type="text/html" method="GET" template="https://www.google.com/search?q={searchTerms}+site%3Agotointeractive.com&amp;hl=en"/>
+  <moz:SearchForm>https://gotointeractive.com/search</moz:SearchForm>
+</OpenSearchDescription>

@@ -6,16 +6,7 @@ node_js:
 notifications:
   email: false
 
-cache:
-  bundler: true
-  directories:
-  - node_modules
-
 script:
-  - npm run test
-  - npm run default
-  - npm run deploy
-  - npm run pagespeed
-
-after_success:
-  - exit 0
+  - npm run copy-static
+  - firebase --project PROJECT_NAME --token FIREBASE_TOKEN
+  - psi --strategy mobile https://tewst-landing-page.firebaseapp.com
