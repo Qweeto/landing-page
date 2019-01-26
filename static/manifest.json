@@ -1,0 +1,22 @@
+{
+  "name": "goto Interactive Software",
+  "short_name": "gotois",
+  "lang": "en-US",
+  "dir": "ltr",
+  "manifest_version": 3,
+  "version": "3.0.0",
+  "description": "",
+  "start_url": "/",
+  "display": "fullscreen",
+  "background_color": "#16161d",
+  "theme_color": "#16161d",
+  "orientation": "any",
+  "permissions": [],
+  "background": {
+  },
+  "icons": [
+  ],
+  "related_applications": [{
+    "platform": "web"
+  }]
+}

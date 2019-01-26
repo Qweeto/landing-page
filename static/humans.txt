@@ -1,0 +1,26 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+              _          _____       _                      _   _              _____        __ _
+             | |        |_   _|     | |                    | | (_)            / ____|      / _| |
+   __ _  ___ | |_ ___     | |  _ __ | |_ ___ _ __ __ _  ___| |_ ___   _____  | (___   ___ | |_| |___      ____ _ _ __ ___
+  / _` |/ _ \| __/ _ \    | | | '_ \| __/ _ \ '__/ _` |/ __| __| \ \ / / _ \  \___ \ / _ \|  _| __\ \ /\ / / _` | '__/ _ \
+ | (_| | (_) | || (_) |  _| |_| | | | ||  __/ | | (_| | (__| |_| |\ V /  __/  ____) | (_) | | | |_ \ V  V / (_| | | |  __/
+  \__, |\___/ \__\___/  |_____|_| |_|\__\___|_|  \__,_|\___|\__|_| \_/ \___| |_____/ \___/|_|  \__| \_/\_/ \__,_|_|  \___|
+   __/ |
+  |___/
+
+---
+
+# TEAM
+  Founder: Denis Baskovsky
+  Twitter: @qkqp
+  From: Moscow, Russia
+
+# THANKS
+  Open source, Books, Musics and 9gag
+  ASCII Logo: http://patorjk.com/
+
+# TECHNOLOGY COLOPHON
+  Language: Russian
+  Doctype: HTML5
+  IDE: WebStorm, Mobirise

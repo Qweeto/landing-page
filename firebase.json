@@ -1,16 +1,8 @@
 {
   "hosting": {
-    "public": "dist",
+    "public": ".tmp",
     "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
+      "project.mobirise"
     ]
   }
 }
