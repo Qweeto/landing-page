@@ -7,6 +7,7 @@ notifications:
   email: false
 
 script:
-  - npm run copy-static
-  - firebase --project PROJECT_NAME --token FIREBASE_TOKEN
-  - psi --strategy mobile https://tewst-landing-page.firebaseapp.com
+  - npm run minify
+  - npm run copy
+  - npm run deploy
+  - npm run pagespeed

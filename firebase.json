@@ -1,8 +1,18 @@
 {
   "hosting": {
-    "public": ".tmp",
+    "public": "./www",
     "ignore": [
-      "project.mobirise"
+    ],
+    "headers": [
+      {
+        "source": "404.html",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=300"
+          }
+        ]
+      }
     ]
   }
 }

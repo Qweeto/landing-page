@@ -3,7 +3,19 @@
 ## Open Mobirise project
 Install app from https://mobirise.com/
 
-## Use Travis CI set Environment Variables
+## Serve local server
+```bash
+npm run start
+```
+
+## Deploy
+
+### Log in
+```bash
+./node_modules/.bin/firebase login:ci
+```
+
+### Use Travis CI set Environment Variables
 ```
 FIREBASE_TOKEN: ••••••••••••••••
 PROJECT_NAME: ••••••••••••••••

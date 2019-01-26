@@ -1,5 +1,5 @@
 {
   "projects": {
-    "default": "tewst-landing-page"
+    "production": "tewst-landing-page"
   }
 }
