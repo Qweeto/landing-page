@@ -19,7 +19,7 @@
     "test": "exit 0",
     "minify": "html-minifier --collapse-whitespace --remove-comments --use-short-doctype --minify-css true --minify-js true --input-dir ./mobirise/ --output-dir .tmp/ --file-ext html",
     "start": "npm run copy && firebase serve --only hosting",
-    "copy": "mkdir www && mkdir www/assets && mkdir www/assets/images ; cp -r ./static ./www ; cp -r ./mobirise/assets/images ./www/assets ; cp ./.tmp/index.html ./www/index.html",
+    "copy": "bash scripts/copy.sh",
     "deploy": "firebase deploy --only hosting --token $FIREBASE_TOKEN",
     "pagespeed": "psi --strategy mobile https://tewst-landing-page.firebaseapp.com"
   },

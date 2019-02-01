@@ -6,6 +6,9 @@ node_js:
 notifications:
   email: false
 
+before_install:
+  - mkdir www/ && mkdir www/assets/
+
 script:
   - npm run minify
   - npm run copy
