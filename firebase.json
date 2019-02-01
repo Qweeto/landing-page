@@ -3,6 +3,12 @@
     "public": "./www",
     "ignore": [
     ],
+    "rewrites": [
+      {
+        "source": "/",
+        "destination": "/index.html"
+      }
+    ],
     "headers": [
       {
         "source": "404.html",

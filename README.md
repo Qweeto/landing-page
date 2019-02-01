@@ -18,5 +18,4 @@ npm run start
 ### Use Travis CI set Environment Variables
 ```
 FIREBASE_TOKEN: ••••••••••••••••
-PROJECT_NAME: ••••••••••••••••
 ```
