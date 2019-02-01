@@ -1,0 +1,51 @@
+<rss
+    xmlns:yandex="http://news.yandex.ru"
+    xmlns:media="http://search.yahoo.com/mrss/"
+    xmlns:turbo="http://turbo.yandex.ru"
+    version="2.0"
+>
+    <channel>
+        <title>goto Interactive</title>
+        <link>https://gotointeractive.com/</link>
+        <description>Link anywhere</description>
+        <item turbo="true">
+            <link>https://gotointeractive.com</link>
+            <author>gotois</author>
+            <category></category>
+            <pubDate>Sun, 29 Sep 2002 19:59:01 +0300</pubDate>
+            <turbo:content>
+                <![CDATA[
+                          <header>
+                             <h1>goto Interactive Software</h1>
+                          </header>
+                          <h2>ProstoDiary</h2>
+                          <p>Virtual Assistant for your life.</p>
+                          <h2>Botris</h2>
+                          <p>Зарабатывай звезды находя наибыстрое решение непростых головоломок.</p>
+                          <iframe
+                            width="560"
+                            height="315"
+                            src="https://www.youtube.com/embed/iuuPUZJXyzg"
+                            frameborder="0"
+                            allowfullscreen
+                          </iframe>
+                          <h2>Arkahold</h2>
+                          <p>Олдскульный минималистичный арканоид. 20 разных уровней, интересные бонусы. Поддержка нескольких типов управления: клавиатура, мышь и геймпад</p>
+                          <iframe
+                            width="560"
+                            height="315"
+                            src="https://www.youtube.com/embed/W4sdkyspz-c"
+                            frameborder="0"
+                            allowfullscreen
+                          </iframe>
+                ]]>
+            </turbo:content>
+            <yandex:related type="infinity">
+                <link
+                 url="https://gotointeractive.com"
+                 img="https://gotointeractive.com/assets/images/screenshot-2019-01-20-at-02.45.39-1080x584.png">Qweeto
+                </link>
+            </yandex:related>
+        </item>
+    </channel>
+</rss>
