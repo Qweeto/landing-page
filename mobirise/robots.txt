@@ -1,0 +1,7 @@
+# www.robotstxt.org/
+
+Sitemap: https://gotointeractive.com/sitemap.xml
+
+User-agent: *
+Disallow: /cgi-bin
+Host: https://gotointeractive.com
