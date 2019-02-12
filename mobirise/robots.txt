@@ -2,6 +2,7 @@
 
 Sitemap: https://gotointeractive.com/sitemap.xml
 
+# Allow crawling of all content
 User-agent: *
-Disallow: /cgi-bin
+Disallow:
 Host: https://gotointeractive.com

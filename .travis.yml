@@ -12,5 +12,6 @@ before_install:
 script:
   - npm run minify
   - npm run copy
+  - npm run amp-validate
   - npm run deploy
   - npm run pagespeed

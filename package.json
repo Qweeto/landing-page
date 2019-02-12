@@ -7,6 +7,7 @@
   "private": false,
   "dependencies": {},
   "devDependencies": {
+    "amphtml-validator": "^1.0.23",
     "firebase-tools": "~6.3.1",
     "html-minifier": "~3.5.21",
     "psi": "~3.1.0"
@@ -22,6 +23,7 @@
     "start": "npm run copy && firebase serve --only hosting",
     "copy": "bash scripts/copy.sh",
     "deploy": "firebase deploy --only hosting --token $FIREBASE_TOKEN",
+    "amp-validate": "amphtml-validator ./www/index.html",
     "pagespeed": "psi --strategy mobile https://tewst-landing-page.firebaseapp.com"
   },
   "homepage": "https://github.com/gotois/landing-page",
