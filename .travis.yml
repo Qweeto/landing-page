@@ -11,6 +11,7 @@ before_install:
 
 script:
   - npm run minify
+  - npm run html-replace
   - npm run copy
   - npm run amp-validate
   - npm run deploy
