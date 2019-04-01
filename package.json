@@ -1,7 +1,7 @@
 {
   "name": "gotois-landing-page",
   "description": "goto Interactive Software Landing Page",
-  "version": "3.0.3",
+  "version": "3.0.4",
   "author": "Denis Baskovsky",
   "main": "mobirise/project.mobirise",
   "private": false,
