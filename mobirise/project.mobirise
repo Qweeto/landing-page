@@ -52,7 +52,7 @@
     "robotsText": "# www.robotstxt.org/\n\nSitemap: https://gotointeractive.com/sitemap.xml\n\n# Allow crawling of all content\nUser-agent: *\nDisallow:\nHost: https://gotointeractive.com\n",
     "robotsSwitcher": "on",
     "siteUrl": "https://gotointeractive.com/sitemap.xml",
-    "sitemapSwitcherAuto": "on",
+    "sitemapSwitcherAuto": "",
     "favicon": "@PROJECT_PATH@/assets/images/ms-touch-icon-144x144-precomposed-128x128.png",
     "noImageResize": "",
     "sitemapSwitcher": "on",
