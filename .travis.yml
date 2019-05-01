@@ -14,5 +14,6 @@ script:
   - npm run html-replace
   - npm run copy
   - npm run amp-validate
+  - npm run sitemap-validate
   - npm run deploy
   - npm run pagespeed

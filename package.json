@@ -1,7 +1,7 @@
 {
   "name": "gotois-landing-page",
   "description": "goto Interactive Software Landing Page",
-  "version": "3.0.5",
+  "version": "3.0.7",
   "author": "Denis Baskovsky",
   "main": "mobirise/project.mobirise",
   "private": false,
@@ -10,13 +10,14 @@
     "amphtml-validator": "~1.0.23",
     "firebase-tools": "~6.7.0",
     "html-minifier": "~4.0.0",
+    "libxmljs": "^0.19.5",
     "psi": "~3.1.0",
     "replace-in-file": "~4.0.0"
   },
   "license": "unlicense",
   "engines": {
-    "node": "~11.6.0",
-    "npm": "~6.8.0"
+    "node": "~11.14.0",
+    "npm": "~6.9.0"
   },
   "scripts": {
     "test": "exit 0",
@@ -25,6 +26,7 @@
     "copy": "bash scripts/copy.sh",
     "deploy": "firebase deploy --only hosting --token $FIREBASE_TOKEN",
     "amp-validate": "amphtml-validator ./www/index.html",
+    "sitemap-validate": "node scripts/sitemap-validator.js",
     "html-replace": "node scripts/html-replace.js",
     "pagespeed": "psi --strategy mobile https://tewst-landing-page.firebaseapp.com"
   },
