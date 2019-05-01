@@ -6,5 +6,10 @@
 		<loc>https://gotointeractive.com/index.html</loc>
                 <priority>1.00</priority>
 	</url>
+        <url>
+		<loc>https://gotointeractive.com/archive</loc>
+	</url>
+
 </urlset>
+
 
