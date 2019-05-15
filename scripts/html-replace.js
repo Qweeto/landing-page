@@ -1,7 +1,8 @@
 const replace = require('replace-in-file');
 
 const options = {
-  files: '.tmp/index.html',
+  encoding: 'utf8',
+  files: '.tmp/*.html',
   // remove mobirise anchor
   from: /<section class="engine"><a.[^]*?<\/a><\/section>/g,
   to: ''
@@ -9,7 +10,7 @@ const options = {
 
 try {
   const changes = replace.sync(options);
-  console.log('Modified files:', changes.join(', '));
+  console.log('Modified files:', JSON.stringify(changes));
 } catch (error) {
   console.error('Error occurred:', error);
 }
