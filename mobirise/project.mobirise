@@ -23,18 +23,18 @@
         "display7Size": 1.1,
         "display4Font": "Lato",
         "display4Size": "1",
-        "isRoundedButtons": false,
-        "isScrollToTopButton": false,
+        "isRoundedButtons": true,
+        "isScrollToTopButton": true,
         "arrowColor": "#4ea2e3"
       },
       "additionalSetColors": [
-        "#fe9bb4",
         "#4b8dd0",
         "#a13a77",
         "#312a68",
         "#c58c87",
         "#ffa71b",
-        "#ffa70b"
+        "#ffa70b",
+        "#e6a170"
       ]
     },
     "path": "@PROJECT_PATH@",
@@ -47,7 +47,7 @@
       }
     ],
     "uniqCompNum": 27,
-    "versionPublish": "4.9.6",
+    "versionPublish": "4.10.3",
     "screenshot": "screenshot.png",
     "robotsText": "# www.robotstxt.org/\n\nSitemap: https://gotointeractive.com/sitemap.xml\n\n# Allow crawling of all content\nUser-agent: *\nDisallow:\nHost: https://gotointeractive.com\n",
     "robotsSwitcher": "on",
@@ -57,14 +57,15 @@
     "noImageResize": "",
     "sitemapSwitcher": "on",
     "сanonical-url": "https://gotointeractive.com/",
-    "google-analytics": "<amp-analytics type=\"googleanalytics\">\r\n    <script type=\"application/json\">\r\n    {\r\n      \"vars\": {\r\n        \"account\": \"UA-28526899-10\"\r\n      },\r\n      \"triggers\": {\r\n        \"default pageview\": {\r\n          \"on\": \"visible\",\r\n          \"request\": \"pageview\"\r\n        }\r\n      }\r\n    }\r\n    </script>\r\n  </amp-analytics>"
+    "google-analytics": "<amp-analytics type=\"googleanalytics\">\r\n    <script type=\"application/json\">\r\n    {\r\n      \"vars\": {\r\n        \"account\": \"UA-28526899-10\"\r\n      },\r\n      \"triggers\": {\r\n        \"default pageview\": {\r\n          \"on\": \"visible\",\r\n          \"request\": \"pageview\"\r\n        }\r\n      }\r\n    }\r\n    </script>\r\n  </amp-analytics>",
+    "cleanCSS": true
   },
   "pages": {
     "index.html": {
       "settings": {
         "main": true,
-        "title": "gotois: main",
-        "meta_descr": "goto Interactive Software: Link anywhere",
+        "title": "Main",
+        "meta_descr": "goto Interactive Software: Link anywhere / Main Page",
         "header_custom": "",
         "footer_custom": "",
         "html_before": ""
@@ -578,9 +579,9 @@
     },
     "mission.html": {
       "settings": {
-        "title": "gotois: mission",
+        "title": "Mission",
         "order": 1,
-        "meta_descr": ""
+        "meta_descr": "gotois: Mission"
       },
       "components": [
         {
@@ -678,9 +679,9 @@
     },
     "archive.html": {
       "settings": {
-        "title": "gotois: archive",
+        "title": "Archive",
         "order": 2,
-        "meta_descr": "Archive games"
+        "meta_descr": "gotois: Archive"
       },
       "components": [
         {
