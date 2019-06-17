@@ -23,6 +23,11 @@
         "type": 301
       },
       {
+        "source": "/#Botris",
+        "destination": "/archive",
+        "type": 301
+      },
+      {
         "source": "/Botris",
         "destination": "/archive",
         "type": 301
