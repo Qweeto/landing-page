@@ -10,10 +10,7 @@ before_install:
   - mkdir www/ && mkdir www/assets/
 
 script:
-  - npm run minify
-  - npm run html-replace
-  - npm run copy
-  - npm run amp-validate
-  - npm run sitemap-validate
+  - npm run build
+  - npm run test
   - npm run deploy
   - npm run pagespeed

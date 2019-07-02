@@ -5,7 +5,7 @@ Install app from https://mobirise.com/
 
 ## Serve local server
 ```bash
-npm run start
+npm run dev
 ```
 
 ## Deploy

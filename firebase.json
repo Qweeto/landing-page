@@ -2,9 +2,7 @@
   "hosting": {
     "public": "./www",
     "cleanUrls": true,
-    "trailingSlash": true,
-    "ignore": [
-    ],
+    "trailingSlash": false,
     "rewrites": [
       {
         "source": "/",
