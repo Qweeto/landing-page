@@ -27,3 +27,7 @@ OPENSEARCH_REPLACE_LINK="<meta charset='UTF-8'><link rel='search' type='applicat
 replace-in-file '<meta charset="UTF-8">' "$OPENSEARCH_REPLACE_LINK" ./www/index.html --encoding=utf-8
 replace-in-file '<meta charset="UTF-8">' "$OPENSEARCH_REPLACE_LINK" ./www/mission.html --encoding=utf-8
 replace-in-file '<meta charset="UTF-8">' "$OPENSEARCH_REPLACE_LINK" ./www/archive.html --encoding=utf-8
+
+node scripts/replace-links.js ./www/index.html
+node scripts/replace-links.js ./www/mission.html
+node scripts/replace-links.js ./www/archive.html
