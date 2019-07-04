@@ -1,19 +1,19 @@
 {
   "name": "gotois-landing-page",
   "description": "goto Interactive Software: Landing Page",
-  "version": "3.0.13",
+  "version": "3.0.14",
   "author": "Denis Baskovsky",
   "main": "mobirise/project.mobirise",
   "private": false,
   "dependencies": {},
   "devDependencies": {
-    "amphtml-validator": "~1.0.23",
-    "firebase-tools": "~7.0.2",
-    "html-minifier": "~4.0.0",
-    "libxmljs": "~0.19.5",
-    "psi": "~3.1.0",
-    "replace-in-file": "~4.1.0",
-    "typograf-cli": "~4.1.1"
+    "amphtml-validator": "1.0.23",
+    "firebase-tools": "7.0.2",
+    "html-minifier": "4.0.0",
+    "libxmljs": "0.19.5",
+    "psi": "3.1.0",
+    "replace-in-file": "4.1.1",
+    "typograf-cli": "4.1.1"
   },
   "license": "unlicense",
   "engines": {
