@@ -1,14 +1,18 @@
-<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
-              xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.sitemaps.org/schemas/sitemap/0.9
-            https://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
-		<loc>https://gotointeractive.com</loc>
-                <priority>1.00</priority>
+		<loc>https://tewst-landing-page.firebaseapp.com</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
 	</url>
 	<url>
-		<loc>https://gotointeractive.com/archive</loc>
+		<loc>https://tewst-landing-page.firebaseapp.com/archive</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
 	</url>
-        <url>
-		<loc>https://gotointeractive.com/mission</loc>
+  <url>
+		<loc>https://tewst-landing-page.firebaseapp.com/mission</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
 	</url>
 </urlset>
