@@ -1,9 +1,15 @@
 #!/bin/sh
 
-# AMP validate
-amphtml-validator ./www/index.html
-amphtml-validator ./www/archive.html
-amphtml-validator ./www/mission.html
+echo 'AMP validate'
+HTMLs=(index.html archive.html mission.html)
+for item in ${HTMLs[*]}
+do
+  amphtml-validator ./www/"$item"
+done
 
-# XML validate
-node ./scripts/xml-validator.js
+echo 'XML validate'
+XMLs=(sitemap.xml opensearch.xml turbo.rss.xml)
+for item in ${XMLs[*]}
+do
+  node ./scripts/xml-validator.js ./www/"$item"
+done

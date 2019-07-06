@@ -24,7 +24,7 @@
     "build": "bash scripts/build.sh",
     "dev": "npm run build && firebase serve --only hosting",
     "deploy": "firebase deploy --only hosting --token $FIREBASE_TOKEN",
-    "test": "bash scripts/test.sh",
+    "test": "bash scripts/test.sh && echo 'test done'",
     "pagespeed": "psi --strategy mobile https://tewst-landing-page.firebaseapp.com"
   },
   "homepage": "https://gotointeractive.com/",
