@@ -5,3 +5,5 @@ www/
 .tmp/
 .firebase/
 /*.log
+mobirise/history/
+mobirise/publish-hashes.json
