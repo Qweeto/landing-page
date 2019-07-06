@@ -31,7 +31,15 @@
         "headers": [
           {
             "key": "Content-Type",
-            "value": "application/opensearchdescription+xml"
+            "value": "text/xml; charset=utf-8"
+          },
+          {
+            "key": "Cache-Control",
+            "value": "max-age=86400, must-revalidate, private"
+          },
+          {
+            "key": "X-Content-Type-Options",
+            "value": "nosniff"
           }
         ]
       },

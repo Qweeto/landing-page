@@ -11,7 +11,7 @@ rsync -va ./mobirise/assets ./www/
 rsync -avz --include='*.html' --exclude='*' ./.tmp/ ./www/
 
 ANCHOR_REGEX="/<section class=\"engine\"><a.[^]*?<\/a><\/section>/g"
-OPENSEARCH_REPLACE_LINK="<meta charset='UTF-8'><link rel='search' type='application/opensearchdescription+xml' title='gotois: Search' href='https://gotointeractive.com/opensearch.xml'/>"
+OPENSEARCH_REPLACE_LINK="<meta charset='UTF-8'><link rel='search' type='application/opensearchdescription+xml' title='gotois: Search' href='//gotointeractive.com/opensearch.xml'>"
 
 HTMLs=(index.html archive.html mission.html)
 for item in ${HTMLs[*]}

@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/" xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
   <ShortName>gotois</ShortName>
-  <LongName>Search in gotois</LongName>
   <Description>gotois Search Engine</Description>
+  <Image height="16" width="16" type="image/x-icon">https://gotointeractive.com/icon.png</Image>
+  <Url type="text/html" template="https://cse.google.com/cse?cx=013887321856262968721:y8vq-syjqom&amp;q={searchTerms}"/>
+  <Url type="application/x-suggestions+json" method="GET" template="https://suggest.yandex.ru/suggest-ff.cgi?part={searchTerms}&amp;uil=ru&amp;v=3&amp;sn=5&amp;lr=10371&amp;yu=5519222721557041240"/>
   <InputEncoding>UTF-8</InputEncoding>
-  <OutputEncoding>UTF-8</OutputEncoding>
-  <Image height="64" width="64" type="image/png">https://gotointeractive.com/icon.png</Image>
-  <Tags>gotois</Tags>
-  <Contact>support@gotointeractive.com</Contact>
-  <Url type="application/opensearchdescription+xml" rel="self" template="https://gotointeractive.com/opensearch.xml"/>
-  <Url type="text/html" method="GET" template="https://cse.google.com/cse?cx=013887321856262968721:y8vq-syjqom&amp;q={searchTerms}"/>
-  <Url type="application/x-suggestions+json" template="https://suggestqueries.google.com/complete/search?output=firefox&amp;client=firefox&amp;hl=en&amp;q={searchTerms}" resultDomain="suggestqueries.google.com"/>
-  <moz:SearchForm>https://cse.google.com/cse?cx=013887321856262968721:y8vq-syjqom</moz:SearchForm>
 </OpenSearchDescription>
