@@ -1,8 +1,11 @@
 # www.robotstxt.org/
 
-Sitemap: https://gotointeractive.com/sitemap.xml
-
 # Allow crawling of all content
 User-agent: *
-Disallow:
+Allow: /
 Host: https://gotointeractive.com
+Sitemap: https://gotointeractive.com/sitemap.xml
+
+User-agent: Googlebot-Image
+Disallow: /*.jpg
+Disallow: /*.png

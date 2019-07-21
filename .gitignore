@@ -6,4 +6,5 @@ www/
 .firebase/
 /*.log
 mobirise/history/
+mobirise/screenshot.png
 mobirise/publish-hashes.json
