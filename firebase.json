@@ -18,11 +18,24 @@
     ],
     "headers": [
       {
+        "source": "/",
+        "headers": [
+          {
+            "key": "X-Robots-Tag",
+            "value": "noimageindex"
+          }
+        ]
+      },
+      {
         "source": "**/*.@(jpg|jpeg|gif|png)",
         "headers": [
           {
             "key": "Cache-Control",
             "value": "max-age=7200"
+          },
+          {
+            "key": "X-Robots-Tag",
+            "value": "noarchive"
           }
         ]
       },
