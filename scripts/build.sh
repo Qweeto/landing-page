@@ -12,6 +12,7 @@ rsync -avz --include='*.html' --exclude='*' ./.tmp/ ./www/
 
 ANCHOR_REGEX="/<section class=\"engine\"><a.[^]*?<\/a><\/section>/g"
 OPENSEARCH_REPLACE_LINK="<meta charset='UTF-8'><link rel='search' type='application/opensearchdescription+xml' title='gotois: Search' href='//gotointeractive.com/opensearch.xml'>"
+JSON_LD=`cat static/json-ld.json`
 
 HTMLs=(index.html archive.html mission.html)
 for item in ${HTMLs[*]}
@@ -24,6 +25,9 @@ do
 
   # html replace: insert opensearch
   replace-in-file '<meta charset="UTF-8">' "$OPENSEARCH_REPLACE_LINK" ./www/"$item" --encoding=utf-8
+
+  # html replace: insert structured data
+  replace-in-file '</head>' "<script type="application/ld+json">${JSON_LD}</script></head>" ./www/"$item" --encoding=utf-8
 
   # norefferer links
   node scripts/replace-links.js ./www/"$item"

@@ -1,0 +1,21 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "goto Interactive Software",
+  "legalName": "gotois",
+  "url": "https://gotointeractive.com",
+  "email": "support@gotointeractive.com",
+  "logo": "https://gotointeractive.com/assets/images/logo-512x256.png",
+  "foundingDate": "2014",
+  "founders": [
+    {
+      "@type": "Person",
+      "name": "Denis Baskovsky"
+    }
+  ],
+  "sameAs": [
+    "https://github.com/gotois",
+    "https://trello.com/gotois",
+    "https://t.me/qweeto"
+  ]
+}
