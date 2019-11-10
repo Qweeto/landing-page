@@ -23,6 +23,10 @@
           {
             "key": "X-Robots-Tag",
             "value": "noimageindex"
+          },
+          {
+            "key": "DNT",
+            "value": 1
           }
         ]
       },

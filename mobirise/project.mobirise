@@ -59,6 +59,8 @@
     "сanonical-url": "https://gotointeractive.com",
     "google-analytics": "<amp-analytics type=\"googleanalytics\">\r\n    <script type=\"application/json\">\r\n    {\r\n      \"vars\": {\r\n        \"account\": \"UA-28526899-10\"\r\n      },\r\n      \"triggers\": {\r\n        \"default pageview\": {\r\n          \"on\": \"visible\",\r\n          \"request\": \"pageview\"\r\n        }\r\n      }\r\n    }\r\n    </script>\r\n  </amp-analytics>",
     "cleanCSS": false,
+    "publishType": "local",
+    "publishPath": "file:///Users/macbook/WebstormProjects/gotois-landing-page/mobirise",
     "canonical-url": "https://gotointeractive.com",
     "": "on"
   },

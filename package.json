@@ -7,11 +7,11 @@
   "private": false,
   "dependencies": {},
   "devDependencies": {
-    "amphtml-validator": "1.0.28",
+    "amphtml-validator": "1.0.29",
     "firebase-tools": "7.6.1",
     "html-minifier": "4.0.0",
     "libxmljs": "0.19.7",
-    "psi": "3.1.0",
+    "psi": "4.0.1",
     "replace-in-file": "4.2.0",
     "typograf-cli": "4.1.2"
   },
