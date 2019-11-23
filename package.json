@@ -8,7 +8,7 @@
   "dependencies": {},
   "devDependencies": {
     "amphtml-validator": "1.0.29",
-    "firebase-tools": "7.6.1",
+    "firebase-tools": "7.8.1",
     "html-minifier": "4.0.0",
     "libxmljs": "0.19.7",
     "psi": "4.0.1",
