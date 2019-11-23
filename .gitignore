@@ -5,6 +5,7 @@ www/
 .tmp/
 .firebase/
 /*.log
+.env
 mobirise/history/
 mobirise/screenshot.png
 mobirise/publish-hashes.json
