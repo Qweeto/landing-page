@@ -14,19 +14,29 @@
         "source": "/#Botris",
         "destination": "/archive",
         "type": 301
+      },
+      {
+        "source": "/amp.html",
+        "destination": "/",
+        "type": 301
       }
     ],
     "headers": [
       {
-        "source": "/",
+        "source": "*",
+        "headers": [
+          {
+            "key": "DNT",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "source": "*.html",
         "headers": [
           {
             "key": "X-Robots-Tag",
             "value": "noimageindex"
-          },
-          {
-            "key": "DNT",
-            "value": "1"
           }
         ]
       },
