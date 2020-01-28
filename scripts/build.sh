@@ -26,8 +26,8 @@ do
   # html replace: insert opensearch
   replace-in-file '<meta charset="UTF-8">' "$OPENSEARCH_REPLACE_LINK" ./www/"$item" --encoding=utf-8
 
-  # html replace: insert structured data
-  replace-in-file '</head>' "<script type="application/ld+json">${JSON_LD}</script></head>" ./www/"$item" --encoding=utf-8
+  # html replace: insert structured data and manifest.json
+  replace-in-file '</head>' "<script type="application/ld+json">${JSON_LD}</script><link rel="manifest" href="/manifest.json" crossOrigin="use-credentials"></head>" ./www/"$item" --encoding=utf-8
 
   # norefferer links
   node scripts/replace-links.js ./www/"$item"
