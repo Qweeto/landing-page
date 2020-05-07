@@ -22,6 +22,7 @@
   },
   "scripts": {
     "build": "bash scripts/build.sh",
+    "clean": "rm -rf .tmp/",
     "dev": "npm run build && firebase serve --only hosting --host 0.0.0.0",
     "deploy": "firebase deploy --only hosting --token $FIREBASE_TOKEN",
     "test": "bash scripts/test.sh && echo 'test done'",
