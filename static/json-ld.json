@@ -1,21 +1,47 @@
-{
+[{
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": "WebSite",
   "name": "goto Interactive Software",
-  "legalName": "gotois",
   "url": "https://gotointeractive.com",
-  "email": "support@gotointeractive.com",
-  "logo": "https://gotointeractive.com/assets/images/logo-512x256.png",
-  "foundingDate": "2014",
-  "founders": [
+  "creator": {
+    "@type": "Person",
+    "@id": "https://me.baskovsky.ru"
+  },
+  "dateCreated": "2015-01-01",
+  "mainEntity": [
     {
-      "@type": "Person",
-      "name": "Denis Baskovsky"
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "ProstoDiary",
+      "description": "Ваш персональный секретарь. Создан оптимизировать каждый аспект вашей жизни, выполнять рутинные операции, уведомлять только о важном, помогая воплощать весь потенциал пользователя.",
+      "url": "https://prosto-diary.gotointeractive.com/",
+      "slogan": "Попробуй облегчить жизнь",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "1"
+      }
     }
   ],
-  "sameAs": [
-    "https://github.com/gotois",
-    "https://trello.com/gotois",
-    "https://t.me/qweeto"
-  ]
-}
+  "author": {
+    "@type": "Organization",
+    "name": "goto Interactive Software",
+    "legalName": "gotois",
+    "url": "https://gotointeractive.com",
+    "email": "support@gotointeractive.com",
+    "logo": "https://gotointeractive.com/assets/images/logo-512x256.png",
+    "foundingDate": "2014",
+    "founders": [
+      {
+        "@type": "Person",
+        "name": "Denis Baskovsky",
+        "url": "http://denis.baskovsky.ru"
+      }
+    ],
+    "sameAs": [
+      "https://github.com/gotois",
+      "https://trello.com/gotois",
+      "https://t.me/qweeto"
+    ]
+  }
+}]
