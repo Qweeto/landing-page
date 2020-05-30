@@ -5,10 +5,9 @@
   "author": "Denis Baskovsky",
   "main": "mobirise/project.mobirise",
   "private": false,
-  "dependencies": {},
   "devDependencies": {
     "amphtml-validator": "1.0.31",
-    "firebase-tools": "7.8.1",
+    "firebase-tools": "8.4.1",
     "html-minifier": "4.0.0",
     "libxmljs": "0.19.7",
     "psi": "4.0.1",
