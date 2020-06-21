@@ -14,7 +14,7 @@ do
 done
 
 echo 'XML validate'
-XMLs=(sitemap.xml opensearch.xml turbo.rss.xml)
+XMLs=(sitemap.xml opensearch.xml)
 for item in ${XMLs[*]}
 do
   node ./scripts/xml-validator.js ./www/"$item"
