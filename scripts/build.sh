@@ -14,7 +14,7 @@ ANCHOR_REGEX="/<section class=\"engine\"><a.[^]*?<\/a><\/section>/g"
 OPENSEARCH_REPLACE_LINK="<meta charset='UTF-8'><link rel='search' type='application/opensearchdescription+xml' title='gotois: Search' href='//gotointeractive.com/opensearch.xml'>"
 JSON_LD=`cat static/json-ld.json`
 
-HTMLs=(index.html archive.html mission.html)
+HTMLs=(404.html archive.html index.html manifest.html vacancies.html)
 for item in ${HTMLs[*]}
 do
   # typograf
