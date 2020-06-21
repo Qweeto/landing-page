@@ -1,11 +1,11 @@
-.DS_Store
 node_modules/
 www/
-.idea/
-.tmp/
-.firebase/
-/*.log
-.env
 mobirise/history/
 mobirise/screenshot.png
 mobirise/publish-hashes.json
+.idea/
+.tmp/
+.firebase/
+.DS_Store
+/*.log
+.env

@@ -19,6 +19,11 @@
         "source": "/amp.html",
         "destination": "/",
         "type": 301
+      },
+      {
+        "source": "/mission",
+        "destination": "/manifest",
+        "type": 301
       }
     ],
     "headers": [

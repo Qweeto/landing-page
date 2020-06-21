@@ -32,7 +32,7 @@ do
   # norefferer links
   node scripts/replace-links.js ./www/"$item"
 
-  # amp to turbo
+  # AMP to YaTurbo
   node ./scripts/turbify.js $item
   node ./scripts/xml-validator.js ./www/turbo/"$item".xml
 done

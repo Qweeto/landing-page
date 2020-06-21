@@ -16,16 +16,16 @@ const feed = new TR({
 });
 const menu = [{
   link: 'https://gotointeractive.com/',
-  text: 'Главная'
+  text: 'Главная',
 }, {
   link: 'https://gotointeractive.com/manifest',
-  text: 'Манифест'
+  text: 'Манифест',
 }, {
   link: 'https://gotointeractive.com/archive',
-  text: 'Архив'
+  text: 'Архив',
 }, {
   link: 'https://gotointeractive.com/vacancies',
-  text: 'Вакансии'
+  text: 'Вакансии',
 }];
 const page = fs.readFileSync('www/' + filename).toString();
 const $ = cheerio.load(page, {

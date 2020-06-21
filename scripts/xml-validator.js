@@ -10,4 +10,4 @@ if (fileXML.errors.length) {
 	process.exit(1);
 }
 
-console.log(filename, 'PASS')
+console.log(filename, 'PASS');
