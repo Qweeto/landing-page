@@ -8,9 +8,9 @@ notifications:
 
 before_install:
   - mkdir www/ && mkdir www/assets/
-  - npm install -g firebase-functions
 
 script:
+  - npm install firebase-functions
   - npm run build
   - npm run test
   - npm run deploy
