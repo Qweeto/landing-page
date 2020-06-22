@@ -20,19 +20,19 @@
     ],
     "redirects": [
       {
-        "source": "/#Botris",
-        "destination": "/archive",
-        "type": 301
-      },
-      {
         "source": "/amp.html",
         "destination": "/",
         "type": 301
       },
       {
+        "source": "/#Botris",
+        "destination": "/archive",
+        "type": 302
+      },
+      {
         "source": "/mission",
         "destination": "/manifest",
-        "type": 301
+        "type": 302
       }
     ],
     "headers": [
