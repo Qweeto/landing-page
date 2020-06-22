@@ -28,8 +28,8 @@
     "build": "bash scripts/build.sh",
     "clean": "rm -rf .tmp/ www/",
     "dev": "npm run build && npm run serve",
-    "serve": "firebase serve --only hosting --host 0.0.0.0",
-    "deploy": "firebase deploy --only hosting --token $FIREBASE_TOKEN",
+    "serve": "firebase serve --host 0.0.0.0",
+    "deploy": "firebase deploy --token $FIREBASE_TOKEN",
     "test": "bash scripts/test.sh && echo 'test done'",
     "pagespeed": "psi --strategy mobile https://tewst-landing-page.firebaseapp.com"
   },

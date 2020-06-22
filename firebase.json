@@ -1,12 +1,21 @@
 {
   "hosting": {
     "public": "./www",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
     "cleanUrls": true,
     "trailingSlash": false,
     "rewrites": [
       {
         "source": "/",
         "destination": "/index.html"
+      },
+      {
+        "source": "/search/**",
+        "function": "search"
       }
     ],
     "redirects": [
