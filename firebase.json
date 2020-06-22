@@ -16,6 +16,10 @@
       {
         "source": "/search/**",
         "function": "search"
+      },
+      {
+        "source": "/suggest/**",
+        "function": "suggest"
       }
     ],
     "redirects": [

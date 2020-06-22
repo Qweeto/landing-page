@@ -3,7 +3,7 @@
   <ShortName>gotois</ShortName>
   <Description>gotois Search Engine</Description>
   <Image height="16" width="16" type="image/x-icon">https://gotointeractive.com/icon.png</Image>
-  <Url type="text/html" template="https://cse.google.com/cse?cx=013887321856262968721:y8vq-syjqom&amp;q={searchTerms}"/>
-  <Url type="application/x-suggestions+json" method="GET" template="https://suggest.yandex.ru/suggest-ff.cgi?part={searchTerms}&amp;uil=ru&amp;v=3&amp;sn=5&amp;lr=10371&amp;yu=5519222721557041240"/>
+  <Url type="text/html" template="https://gotointeractive.com/search/?name={searchTerms}"/>
+  <Url type="application/x-suggestions+json" method="GET" template="https://gotointeractive.com/suggest/?text={searchTerms}"/>
   <InputEncoding>UTF-8</InputEncoding>
 </OpenSearchDescription>
