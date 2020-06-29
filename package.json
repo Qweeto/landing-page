@@ -14,7 +14,7 @@
     "firebase-tools": "8.4.3",
     "html-minifier": "4.0.0",
     "libxmljs": "0.19.7",
-    "lighthouse": "6.0.0",
+    "lighthouse": "6.1.0",
     "replace-in-file": "4.3.1",
     "turbo-rss": "1.0.8",
     "typograf-cli": "4.1.3"

@@ -44,8 +44,20 @@
         "source": "*",
         "headers": [
           {
-            "key": "DNT",
-            "value": "1"
+            "key": "X-Content-Type-Options",
+            "value": "nosniff"
+          },
+          {
+            "key": "X-Frame-Options",
+            "value": "SAMEORIGIN"
+          },
+          {
+            "key": "X-Xss-Protection",
+            "value": "1; report=URL"
+          },
+          {
+            "key": "Strict-Transport-Security",
+            "value": "max-age=31536000; includeSubDomains; preload"
           }
         ]
       },
@@ -55,6 +67,10 @@
           {
             "key": "X-Robots-Tag",
             "value": "noimageindex"
+          },
+          {
+            "key": "Cache-Control",
+            "value": "max-age=7200"
           }
         ]
       },
@@ -63,7 +79,7 @@
         "headers": [
           {
             "key": "Cache-Control",
-            "value": "max-age=7200"
+            "value": "max-age=86400, public"
           },
           {
             "key": "X-Robots-Tag",
@@ -81,19 +97,6 @@
           {
             "key": "Cache-Control",
             "value": "max-age=86400, must-revalidate, private"
-          },
-          {
-            "key": "X-Content-Type-Options",
-            "value": "nosniff"
-          }
-        ]
-      },
-      {
-        "source": "404.html",
-        "headers": [
-          {
-            "key": "Cache-Control",
-            "value": "max-age=300"
           }
         ]
       }

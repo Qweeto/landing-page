@@ -4,44 +4,52 @@ const cheerio = require('cheerio');
 const pkg = require('../package.json');
 
 const [nodePath, executorPath, filename] = process.argv;
+const intput_dir = 'www';
+const output_dir = 'www/turbo';
 
-fs.mkdir('www/turbo', { recursive: true }, (error) => {
-  if (error) throw error;
+function turbify({ image_url, menu }) {
+  fs.mkdir(output_dir, { recursive: true }, (error) => {
+    if (error) throw error;
+  });
+  const page = fs.readFileSync(intput_dir + '/' + filename).toString();
+  const $ = cheerio.load(page, {
+    normalizeWhitespace: true,
+  },);
+  const title = $('title').text();
+  const body = $('body').html();
+  const feed = new TR({
+    title: pkg.name,
+    description: pkg.description,
+    link: pkg.homepage,
+    language: 'ru',
+  });
+  feed.item({
+    title,
+    image_url,
+    url: pkg.homepage + filename,
+    author: pkg.author.name,
+    date: new Date(),
+    content: body,
+    menu,
+    related: [],
+  });
+  return feed.xml();
+}
+
+const turboPage = turbify({
+  image_url: pkg.homepage + 'assets/images/logo-4-512x256.png',
+  menu: [{
+    link: pkg.homepage,
+    text: 'Главная',
+  }, {
+    link: pkg.homepage + 'manifest',
+    text: 'Манифест',
+  }, {
+    link: pkg.homepage + 'archive',
+    text: 'Архив',
+  }, {
+    link: pkg.homepage + 'vacancies',
+    text: 'Вакансии',
+  }]
 });
-const feed = new TR({
-  title: pkg.name,
-  description: pkg.description,
-  link: pkg.homepage,
-  language: 'ru',
-});
-const menu = [{
-  link: 'https://gotointeractive.com/',
-  text: 'Главная',
-}, {
-  link: 'https://gotointeractive.com/manifest',
-  text: 'Манифест',
-}, {
-  link: 'https://gotointeractive.com/archive',
-  text: 'Архив',
-}, {
-  link: 'https://gotointeractive.com/vacancies',
-  text: 'Вакансии',
-}];
-const page = fs.readFileSync('www/' + filename).toString();
-const $ = cheerio.load(page, {
-  normalizeWhitespace: true,
-},);
-const title = $('title').text();
-const body = $('body').html();
-feed.item({
-  title,
-  image_url: 'https://gotointeractive.com/assets/images/logo-4-512x256.png',
-  url: 'https://gotointeractive.com/' + filename,
-  author: pkg.author.name,
-  date: new Date(),
-  content: body,
-  menu,
-  related: [],
-});
-const xml = feed.xml();
-fs.writeFileSync('www/turbo/' + filename + '.xml', Buffer.from(xml));
+fs.writeFileSync(`${output_dir}/${filename}.xml`, Buffer.from(turboPage));
