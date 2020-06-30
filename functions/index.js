@@ -37,6 +37,9 @@ exports.suggest = functions.https.onRequest((request, response) => {
 
 exports.dialog = functions.https.onRequest(async (request, response) => {
   try {
+    console.log(admin.credential.applicationDefault());
+    console.log('---');
+    console.log(serviceAccount);
     const sessionPath = sessionClient.sessionPath(
       app,
       request.body.session.session_id,
