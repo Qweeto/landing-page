@@ -40,6 +40,12 @@ exports.dialog = functions.https.onRequest(async (request, response) => {
       version: request.body.version,
     });
   } catch (error) {
-    response.send(error.message);
+    response.send({
+      response: {
+        text: error.message,
+        end_session: true,
+      },
+      version: request.body.version,
+    });
   }
 });
