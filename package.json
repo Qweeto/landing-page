@@ -21,14 +21,15 @@
   },
   "license": "unlicense",
   "engines": {
-    "node": "10.x",
+    "node": "10",
     "npm": "6.9.0"
   },
   "scripts": {
     "build": "bash scripts/build.sh",
     "clean": "rm -rf .tmp/ www/",
-    "dev": "npm run build && npm run serve",
+    "dev": "npm run build && npm run serve & npm run expose",
     "serve": "firebase serve --host 0.0.0.0",
+    "expose": "ssh -R 80:localhost:5000 serveo.net",
     "deploy": "firebase deploy --token $FIREBASE_TOKEN",
     "test": "bash scripts/test.sh && echo 'test done'",
     "pagespeed": "mkdir -p reports && lighthouse https://tewst-landing-page.web.app --budget-path=./budget.json --output json --output-path ./reports/report.json"

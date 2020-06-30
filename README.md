@@ -18,4 +18,19 @@ npm run dev
 FIREBASE_TOKEN: ••••••••••••••••
 ```
 
+### Set firebase credential environment
+Set [google service accounts credential](https://console.firebase.google.com/project/tewst-landing-page/settings/serviceaccounts/adminsdk)
+```bash
+firebase functions:config:set service_account.type=••••••••••••••••
+firebase functions:config:set service_account.project_id=••••••••••••••••
+firebase functions:config:set service_account.private_key_id=••••••••••••••••
+firebase functions:config:set service_account.private_key=••••••••••••••••
+firebase functions:config:set service_account.client_email=••••••••••••••••
+firebase functions:config:set service_account.client_id=••••••••••••••••
+firebase functions:config:set service_account.auth_uri=••••••••••••••••
+firebase functions:config:set service_account.token_uri=••••••••••••••••
+firebase functions:config:set service_account.auth_provider_x509_cert_url=••••••••••••••••
+firebase functions:config:set service_account.client_x509_cert_url=••••••••••••••••
+``` 
+
 With ❤️

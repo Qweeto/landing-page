@@ -20,6 +20,10 @@
       {
         "source": "/suggest/**",
         "function": "suggest"
+      },
+      {
+        "source": "/dialog",
+        "function": "dialog"
       }
     ],
     "redirects": [
