@@ -18,24 +18,28 @@ exports.suggest = functions.https.onRequest((request, response) => {
 });
 
 exports.dialog = functions.https.onRequest(async (request, response) => {
-  const sessionPath = sessionClient.sessionPath(
-    app,
-    request.body.session.session_id,
-  );
-  const responses = await sessionClient.detectIntent({
-    session: sessionPath,
-    queryInput: {
-      text: {
-        text: request.body.request.original_utterance,
-        languageCode: request.body.meta.locale.toLowerCase(),
+  try {
+    const sessionPath = sessionClient.sessionPath(
+      app,
+      request.body.session.session_id,
+    );
+    const responses = await sessionClient.detectIntent({
+      session: sessionPath,
+      queryInput: {
+        text: {
+          text: request.body.request.original_utterance,
+          languageCode: request.body.meta.locale.toLowerCase(),
+        },
       },
-    },
-  });
-  response.send({
-    response: {
-      text: responses[0].queryResult.fulfillmentText,
-      end_session: false,
-    },
-    version: request.body.version,
-  });
+    });
+    response.send({
+      response: {
+        text: responses[0].queryResult.fulfillmentText,
+        end_session: false,
+      },
+      version: request.body.version,
+    });
+  } catch (error) {
+    response.send(error.message);
+  }
 });
