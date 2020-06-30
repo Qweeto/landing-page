@@ -1,14 +1,7 @@
 const functions = require('firebase-functions');
 const dialogflow = require('dialogflow');
-const admin = require('firebase-admin');
-
-admin.initializeApp({
-  credential: admin.credential.applicationDefault(),
-  databaseURL: 'https://tewst-landing-page.firebaseio.com',
-});
 
 const serviceAccount = functions.config().service_account;
-
 const app = 'tewst-landing-page';
 const sessionClient = new dialogflow.SessionsClient({
   credentials: {
@@ -37,9 +30,6 @@ exports.suggest = functions.https.onRequest((request, response) => {
 
 exports.dialog = functions.https.onRequest(async (request, response) => {
   try {
-    console.log(admin.credential.applicationDefault());
-    console.log('---');
-    console.log(serviceAccount);
     const sessionPath = sessionClient.sessionPath(
       app,
       request.body.session.session_id,

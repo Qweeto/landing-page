@@ -20,6 +20,8 @@ FIREBASE_TOKEN: ••••••••••••••••
 
 ### Set firebase credential environment
 Set [google service accounts credential](https://console.firebase.google.com/project/tewst-landing-page/settings/serviceaccounts/adminsdk)
+
+Remove \n symbols
 ```bash
 firebase functions:config:set service_account.type=••••••••••••••••
 firebase functions:config:set service_account.project_id=••••••••••••••••
