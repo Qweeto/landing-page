@@ -10,7 +10,7 @@ before_install:
   - mkdir www/ && mkdir www/assets/
 
 script:
-  - npm install firebase-functions firebase-admin firebase-functions-test
+  - npm install dialogflow firebase-functions firebase-admin firebase-functions-test
   - npm run build
   - npm run test
   - npm run deploy
