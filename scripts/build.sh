@@ -13,6 +13,8 @@ rsync -avz --include='*.html' --exclude='*' ./.tmp/ ./www/
 ANCHOR_REGEX="/<section class=\"engine\"><a.[^]*?<\/a><\/section>/g"
 OPENSEARCH_REPLACE_LINK="<meta charset='UTF-8'><link rel='search' type='application/opensearchdescription+xml' title='gotois: Search' href='//gotointeractive.com/opensearch.xml'>"
 JSON_LD=`cat static/json-ld.json`
+SW_INSTALL="<script async custom-element='amp-install-serviceworker' src='https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js'></script>"
+SW_AMP="<amp-install-serviceworker src='/sw.js' layout='nodisplay' data-iframe-src='/install-service-worker.html'></amp-install-serviceworker>"
 
 HTMLs=(404.html archive.html index.html manifest.html vacancies.html)
 for item in ${HTMLs[*]}
@@ -27,17 +29,13 @@ do
   replace-in-file '<meta charset="UTF-8">' "$OPENSEARCH_REPLACE_LINK" ./www/"$item" --encoding=utf-8
 
   # html replace: insert structured data and manifest.json
-  replace-in-file '</head>' "<script type="application/ld+json">${JSON_LD}</script><link rel="manifest" href="/manifest.json" crossOrigin="use-credentials"><meta name="theme-color" content="#16161d"/></head>" ./www/"$item" --encoding=utf-8
+  replace-in-file '</head>' "$SW_INSTALL<script type="application/ld+json">${JSON_LD}</script><link rel="manifest" href="/manifest.json" crossOrigin="use-credentials"><meta name="theme-color" content="#16161d"/></head>" ./www/"$item" --encoding=utf-8
 
   # norefferer links
   node scripts/replace-links.js ./www/"$item"
 
   # PWA Service Worker Registration
-  if [[ "$item" == "index.html" ]]
-  then
-    echo "Registration sw.js"
-    replace-in-file '</body>' "<script>if ('serviceWorker' in navigator) {navigator.serviceWorker.register('sw.js').then(function (reg) {console.log('Registration succeeded. Scope is ' + reg.scope);}).catch(function (error) {console.error('Trouble with sw: ', error);});}</script></body>" ./www/"$item" --encoding=utf-8
-  fi
+  replace-in-file '</body>' "$SW_AMP</body>" ./www/"$item" --encoding=utf-8
 
   # AMP to YaTurbo
   node ./scripts/turbify.js $item

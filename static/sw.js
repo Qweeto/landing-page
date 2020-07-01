@@ -1,20 +1,32 @@
-const cacheList = [
-  'index.html',
-];
+importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.4.1/workbox-sw.js');
 
-const CACHE_NAME = 'v1';
-self.addEventListener('install', function(event) {
-  event.waitUntil(
-    caches.open(CACHE_NAME).then(function(cache) {
-      return cache.addAll(cacheList);
-    })
-  );
+workbox.precaching.precacheAndRoute([]);
+
+self.addEventListener('install', event => {
+  const urls = [
+    'index.html',
+    '/',
+    'https://cdn.ampproject.org/v0.js',
+    'https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js',
+    'https://cdn.ampproject.org/shadow-v0.js',
+  ];
+  const cacheName = workbox.core.cacheNames.runtime;
+  event.waitUntil(caches.open(cacheName).then(cache => cache.addAll(urls)));
 });
 
-self.addEventListener('fetch', function (event) {
-  event.respondWith(
-    caches.match(event.request, { ignoreSearch: true }).then(function(response) {
-      return response || fetch(event.request);
-    })
-  );
+workbox.routing.registerRoute(/(index)(.*)html|(.*)\/$/, args => {
+  return workbox.strategies.networkFirst().handle(args).then(response => {
+    if (!response) {
+      return caches.match('offline.html');
+    }
+    return response;
+  });
 });
+
+workbox.routing.registerRoute(/\.(?:js|css|png|gif|jpg|svg)$/,
+  workbox.strategies.cacheFirst()
+);
+
+workbox.routing.registerRoute(/(.*)cdn\.ampproject\.org(.*)/,
+  workbox.strategies.staleWhileRevalidate()
+);
