@@ -3,20 +3,6 @@ const dialogflow = require('dialogflow');
 
 const serviceAccount = functions.config().service_account;
 const app = 'tewst-landing-page';
-const sessionClient = new dialogflow.SessionsClient({
-  credentials: {
-    type: serviceAccount.type,
-    project_id: serviceAccount.project_id,
-    private_key_id: serviceAccount.private_key_id,
-    private_key: serviceAccount.private_key,
-    client_email: serviceAccount.client_email,
-    client_id: serviceAccount.client_id,
-    auth_uri: serviceAccount.auth_uri,
-    token_uri: serviceAccount.token_uri,
-    auth_provider_x509_cert_url: serviceAccount.auth_provider_x509_cert_url,
-    client_x509_cert_url: serviceAccount.client_x509_cert_url,
-  },
-});
 
 exports.search = functions.https.onRequest((request, response) => {
   const cx = '013887321856262968721:y8vq-syjqom';
@@ -30,10 +16,34 @@ exports.suggest = functions.https.onRequest((request, response) => {
 
 exports.dialog = functions.https.onRequest(async (request, response) => {
   try {
+    const sessionClient = new dialogflow.SessionsClient({
+      credentials: {
+        type: serviceAccount.type,
+        project_id: serviceAccount.project_id,
+        private_key_id: serviceAccount.private_key_id,
+        private_key: serviceAccount.private_key,
+        client_email: serviceAccount.client_email,
+        client_id: serviceAccount.client_id,
+        auth_uri: serviceAccount.auth_uri,
+        token_uri: serviceAccount.token_uri,
+        auth_provider_x509_cert_url: serviceAccount.auth_provider_x509_cert_url,
+        client_x509_cert_url: serviceAccount.client_x509_cert_url,
+      },
+    });
     const sessionPath = sessionClient.sessionPath(
       app,
       request.body.session.session_id,
     );
+    if (request.body.request.original_utterance.length === 0) {
+      response.send({
+        response: {
+          text: 'Привет. Это навигация по сайту goto Interactive Software.',
+          end_session: false,
+        },
+        version: request.body.version,
+      });
+      return;
+    }
     const responses = await sessionClient.detectIntent({
       session: sessionPath,
       queryInput: {
@@ -46,7 +56,7 @@ exports.dialog = functions.https.onRequest(async (request, response) => {
     response.send({
       response: {
         text: responses[0].queryResult.fulfillmentText,
-        end_session: false,
+        end_session: true,
       },
       version: request.body.version,
     });

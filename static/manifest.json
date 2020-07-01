@@ -5,18 +5,20 @@
   "dir": "ltr",
   "manifest_version": 3,
   "version": "3.0.0",
-  "description": "",
-  "start_url": "/",
-  "display": "fullscreen",
+  "description": "goto Interactive Software Landing Page",
+  "start_url": "/index.html",
+  "display": "minimal-ui",
   "background_color": "#16161d",
   "theme_color": "#16161d",
+  "scope": "/",
   "orientation": "any",
   "permissions": [],
+  "shortcuts": [],
   "chrome_settings_overrides": {
     "homepage": "https://gotointeractive.com",
     "search_provider": {
       "name": "gotois",
-      "search_url": "https://cse.google.com/cse?cx=013887321856262968721:y8vq-syjqom&q={searchTerms}",
+      "search_url": "https://gotointeractive.com/search/?name={searchTerms}",
       "keyword": "gotois",
       "favicon_url": "https://gotointeractive.com/icon.png"
     }
@@ -24,8 +26,16 @@
   "background": {
   },
   "icons": [
+    {
+      "src": "/assets/images/logo-4-512x256.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/assets/images/logo-4-512x256.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
   ],
-  "related_applications": [{
-    "platform": "web"
-  }]
+  "related_applications": []
 }
