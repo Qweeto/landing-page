@@ -16,6 +16,29 @@ exports.suggest = functions.https.onRequest((request, response) => {
 
 exports.dialog = functions.https.onRequest(async (request, response) => {
   try {
+    const userPhrase = request.body.request.original_utterance.trim();
+    // Welcome screen
+    if (userPhrase.length === 0) {
+      response.send({
+        response: {
+          text: 'Привет. Это навигация по сайту goto Interactive Software.',
+          end_session: false,
+        },
+        version: request.body.version,
+      });
+      return;
+    }
+    // YaDialog ping
+    if (userPhrase === 'ping') {
+      response.send({
+        response: {
+          text: 'pong',
+          end_session: true,
+        },
+        version: request.body.version,
+      });
+      return;
+    }
     const sessionClient = new dialogflow.SessionsClient({
       credentials: {
         type: serviceAccount.type,
@@ -34,16 +57,6 @@ exports.dialog = functions.https.onRequest(async (request, response) => {
       app,
       request.body.session.session_id,
     );
-    if (request.body.request.original_utterance.length === 0) {
-      response.send({
-        response: {
-          text: 'Привет. Это навигация по сайту goto Interactive Software.',
-          end_session: false,
-        },
-        version: request.body.version,
-      });
-      return;
-    }
     const responses = await sessionClient.detectIntent({
       session: sessionPath,
       queryInput: {
