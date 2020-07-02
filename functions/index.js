@@ -16,7 +16,7 @@ exports.suggest = functions.https.onRequest((request, response) => {
 
 exports.dialog = functions.https.onRequest(async (request, response) => {
   try {
-    const userPhrase = request.body.request.original_utterance.trim();
+    const userPhrase = request.body.request.original_utterance;
     // Welcome screen
     if (userPhrase.length === 0) {
       response.send({
@@ -32,8 +32,8 @@ exports.dialog = functions.https.onRequest(async (request, response) => {
     if (userPhrase === 'ping') {
       response.send({
         response: {
-          text: 'pong',
-          end_session: true,
+          text: 'понг',
+          end_session: false,
         },
         version: request.body.version,
       });
