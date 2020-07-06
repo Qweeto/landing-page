@@ -69,17 +69,19 @@ exports.dialog = functions.https.onRequest(async (request, response) => {
     const matches = responses[0].queryResult.fulfillmentText.match(/\bhttps?:\/\/\S+/gi);
     const responseObj = {
       text: responses[0].queryResult.fulfillmentText,
-      end_session: true,
     };
     if (matches) {
-      response.buttons = matches.map(url => {
+      responseObj.end_session = false;
+      responseObj.buttons = matches.map(url => {
         return {
           title: 'Открыть ссылку',
-          payload: {},
+          payload: 'button1',
           url: url,
           hide: true,
         };
       });
+    } else {
+      responseObj.end_session = true;
     }
     response.send({
       response: responseObj,
