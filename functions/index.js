@@ -66,11 +66,23 @@ exports.dialog = functions.https.onRequest(async (request, response) => {
         },
       },
     });
+    const matches = responses[0].queryResult.fulfillmentText.match(/\bhttps?:\/\/\S+/gi);
+    const responseObj = {
+      text: responses[0].queryResult.fulfillmentText,
+      end_session: true,
+    };
+    if (matches) {
+      response.buttons = matches.map(url => {
+        return {
+          title: 'Открыть ссылку',
+          payload: {},
+          url: url,
+          hide: true,
+        };
+      });
+    }
     response.send({
-      response: {
-        text: responses[0].queryResult.fulfillmentText,
-        end_session: true,
-      },
+      response: responseObj,
       version: request.body.version,
     });
   } catch (error) {
