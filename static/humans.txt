@@ -21,6 +21,6 @@
   ASCII Logo: http://patorjk.com/
 
 # TECHNOLOGY COLOPHON
-  Language: Russian
-  Doctype: HTML5
+  Programming languages: JavaScript
+  Doctype: HTML5, AMP, JSON-LD
   IDE: WebStorm, Mobirise

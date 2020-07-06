@@ -15,7 +15,7 @@
       "name": "ProstoDiary",
       "description": "Ваш персональный секретарь. Создан оптимизировать каждый аспект вашей жизни, выполнять рутинные операции, уведомлять только о важном, помогая воплощать весь потенциал пользователя.",
       "url": "https://prosto-diary.gotointeractive.com/",
-      "slogan": "Попробуй облегчить жизнь",
+      "slogan": "Попробуй облегчить себе жизнь",
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "5.0",
@@ -41,7 +41,8 @@
     "sameAs": [
       "https://github.com/gotois",
       "https://trello.com/gotois",
-      "https://t.me/qweeto"
+      "https://t.me/qweeto",
+      "https://www.facebook.com/gotois"
     ]
   }
 }]

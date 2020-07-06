@@ -7,9 +7,11 @@ Host: https://gotointeractive.com
 Sitemap: https://gotointeractive.com/sitemap.xml
 
 Disallow: /404.html
+Disallow: /offline.html
 
 User-agent: Googlebot-Image
 Disallow: /*.jpg
 Disallow: /*.png
+
 
 

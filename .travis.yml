@@ -15,5 +15,5 @@ script:
   - npm run test
   - npm run deploy
 
-after_script:
-  - npm run pagespeed
+# after_script:
+#   - npm run pagespeed

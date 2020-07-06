@@ -3,6 +3,7 @@
 # copy static
 rsync -va ./static/ ./www/
 rsync -va ./mobirise/robots.txt ./www/
+rsync -va ./mobirise/offline.html ./www/
 rsync -va ./mobirise/sitemap.xml ./www/
 rsync -va ./mobirise/assets ./www/
 

@@ -1,7 +1,7 @@
 const functions = require('firebase-functions');
 const dialogflow = require('dialogflow');
 
-const serviceAccount = functions.config().service_account;
+const credentials = functions.config().service_account;
 const app = 'tewst-landing-page';
 
 exports.search = functions.https.onRequest((request, response) => {
@@ -17,7 +17,7 @@ exports.suggest = functions.https.onRequest((request, response) => {
 exports.dialog = functions.https.onRequest(async (request, response) => {
   try {
     // Click button link
-    if (!request.body.request.original_utterance) {
+    if (!request.body.request.hasOwnProperty('original_utterance')) {
       response.send({
         response: {
           text: 'Приятно было помочь.',
@@ -32,7 +32,7 @@ exports.dialog = functions.https.onRequest(async (request, response) => {
     if (userPhrase.length === 0) {
       response.send({
         response: {
-          text: 'Привет. Это навигация по сайту goto Interactive Software.',
+          text: 'Привет. Это помощник по навигации сайта goto Interactive Software.',
           end_session: false,
         },
         version: request.body.version,
@@ -50,20 +50,7 @@ exports.dialog = functions.https.onRequest(async (request, response) => {
       });
       return;
     }
-    const sessionClient = new dialogflow.SessionsClient({
-      credentials: {
-        type: serviceAccount.type,
-        project_id: serviceAccount.project_id,
-        private_key_id: serviceAccount.private_key_id,
-        private_key: serviceAccount.private_key,
-        client_email: serviceAccount.client_email,
-        client_id: serviceAccount.client_id,
-        auth_uri: serviceAccount.auth_uri,
-        token_uri: serviceAccount.token_uri,
-        auth_provider_x509_cert_url: serviceAccount.auth_provider_x509_cert_url,
-        client_x509_cert_url: serviceAccount.client_x509_cert_url,
-      },
-    });
+    const sessionClient = new dialogflow.SessionsClient({ credentials });
     const sessionPath = sessionClient.sessionPath(
       app,
       request.body.session.session_id,
@@ -81,7 +68,7 @@ exports.dialog = functions.https.onRequest(async (request, response) => {
     const responseObj = {
       text: responses[0].queryResult.fulfillmentText,
     };
-    if (matches) {
+    if (matches && matches.length) {
       responseObj.end_session = false;
       responseObj.buttons = matches.map(url => {
         return {
