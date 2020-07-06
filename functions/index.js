@@ -16,6 +16,17 @@ exports.suggest = functions.https.onRequest((request, response) => {
 
 exports.dialog = functions.https.onRequest(async (request, response) => {
   try {
+    // Click button link
+    if (!request.body.request.original_utterance) {
+      response.send({
+        response: {
+          text: 'Приятно было помочь.',
+          end_session: true,
+        },
+        version: request.body.version,
+      });
+      return;
+    }
     const userPhrase = request.body.request.original_utterance;
     // Welcome screen
     if (userPhrase.length === 0) {
