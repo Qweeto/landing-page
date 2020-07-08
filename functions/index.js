@@ -16,6 +16,10 @@ exports.suggest = functions.https.onRequest((request, response) => {
 
 exports.dialog = functions.https.onRequest(async (request, response) => {
   try {
+    if (!request.body.request) {
+      response.status(400).send(`<h1>Проверьте правильность запроса.</h1>`);
+      return;
+    }
     // Click button link
     if (!request.body.request.hasOwnProperty('original_utterance')) {
       response.send({
@@ -27,9 +31,9 @@ exports.dialog = functions.https.onRequest(async (request, response) => {
       });
       return;
     }
-    const userPhrase = request.body.request.original_utterance;
+    const { original_utterance } = request.body.request;
     // Welcome screen
-    if (userPhrase.length === 0) {
+    if (original_utterance.length === 0) {
       response.send({
         response: {
           text: 'Привет. Это помощник по навигации сайта goto Interactive Software.',
@@ -40,7 +44,7 @@ exports.dialog = functions.https.onRequest(async (request, response) => {
       return;
     }
     // YaDialog ping
-    if (userPhrase === 'ping') {
+    if (original_utterance === 'ping') {
       response.send({
         response: {
           text: 'понг',
@@ -59,7 +63,7 @@ exports.dialog = functions.https.onRequest(async (request, response) => {
       session: sessionPath,
       queryInput: {
         text: {
-          text: request.body.request.original_utterance,
+          text: original_utterance,
           languageCode: request.body.meta.locale.toLowerCase(),
         },
       },
