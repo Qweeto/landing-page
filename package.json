@@ -9,25 +9,26 @@
   "main": "mobirise/project.mobirise",
   "private": false,
   "devDependencies": {
-    "amphtml-validator": "1.0.31",
+    "amphtml-validator": "1.0.33",
     "cheerio": "1.0.0-rc.3",
     "firebase-tools": "8.4.3",
     "libxmljs": "0.19.7",
-    "lighthouse": "6.1.0",
+    "lighthouse": "6.4.1",
     "mobirise-optimizator": "git+https://github.com/qertis/mobirise-optimizator.git",
+    "ngrok": "3.3.0",
     "turbo-rss": "1.0.8"
   },
   "license": "unlicense",
   "engines": {
     "node": "10",
-    "npm": "6.9.0"
+    "npm": "6.9.x"
   },
   "scripts": {
     "build": "bash scripts/build.sh",
     "clean": "rm -rf .tmp/ www/",
     "dev": "npm run build && npm run serve & npm run expose",
     "serve": "firebase serve --host 0.0.0.0",
-    "expose": "ssh -R 80:localhost:5000 serveo.net",
+    "expose": "ngrok http 5001",
     "deploy": "firebase deploy --token $FIREBASE_TOKEN",
     "test": "bash scripts/test.sh && echo 'test done'",
     "pagespeed": "mkdir -p reports && lighthouse https://tewst-landing-page.web.app --budget-path=./budget.json --output json --output-path ./reports/report.json"

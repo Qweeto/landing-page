@@ -10,4 +10,6 @@ mobirise/publish-hashes.json
 .DS_Store
 /*.log
 .env
+functions/*.log
 functions/service_account.json
+functions/temp
