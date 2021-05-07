@@ -29,7 +29,7 @@
     "dev": "npm run build && npm run serve & npm run expose",
     "serve": "firebase serve --host 0.0.0.0",
     "expose": "ngrok http 5001",
-    "deploy": "firebase deploy --token $FIREBASE_TOKEN",
+    "deploy": "firebase use production && firebase deploy --token $FIREBASE_TOKEN",
     "test": "bash scripts/test.sh && echo 'test done'",
     "pagespeed": "mkdir -p reports && lighthouse https://tewst-landing-page.web.app --budget-path=./budget.json --output json --output-path ./reports/report.json"
   },
