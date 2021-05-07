@@ -42,6 +42,11 @@
         "source": "/mission",
         "destination": "/manifest",
         "type": 302
+      },
+      {
+        "source": "/archive",
+        "destination": "https://baskovsky.ru/category/разработка/",
+        "type": 301
       }
     ],
     "headers": [
