@@ -5,11 +5,6 @@
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
 	</url>
-	<url>
-		<loc>https://tewst-landing-page.firebaseapp.com/archive</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-	</url>
   <url>
 		<loc>https://tewst-landing-page.firebaseapp.com/manifest</loc>
     <changefreq>monthly</changefreq>
