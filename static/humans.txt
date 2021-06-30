@@ -19,8 +19,10 @@
 # THANKS
   Open source, Books, Musics and 9gag
   ASCII Logo: http://patorjk.com/
+  TurboState: https://t.me/turbostate
+  Linked Data Russia: https://t.me/LinkedDataRussia
 
 # TECHNOLOGY COLOPHON
-  Programming languages: JavaScript
+  Programming languages: JavaScript, NodeJS, Firebase
   Doctype: HTML5, AMP, JSON-LD
-  IDE: WebStorm, Mobirise
+  IDE: WebStorm, IDEA, Mobirise
