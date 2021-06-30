@@ -48,6 +48,9 @@ const turboPage = turbify({
     link: pkg.homepage + 'archive',
     text: 'Архив',
   }, {
+    link: pkg.homepage + 'mantra',
+    text: 'Мантра',
+  }, {
     link: pkg.homepage + 'vacancies',
     text: 'Вакансии',
   }]
