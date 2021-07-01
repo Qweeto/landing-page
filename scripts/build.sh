@@ -7,7 +7,7 @@ rsync -va ./mobirise/offline.html ./www/
 rsync -va ./mobirise/sitemap.xml ./www/
 rsync -va ./mobirise/assets ./www/
 
-HTMLs=(404.html index.html manifest.html vacancies.html)
+HTMLs=(404.html fund.html index.html manifest.html mantra.html offline.html vacancies.html)
 for item in ${HTMLs[*]}
 do
   mobirise-optimizator $item --white-list="gotointeractive.com,baskovsky.ru" --minifier=true --input-dir "./mobirise/" --output-dir "www/" --open-search-title="gotois: Search" --open-search-path="//gotointeractive.com/opensearch.xml" --pwa-manifest-path="/manifest.json" --pwa-sw-path="/sw.js" --pwa-install-service-worker-path="/install-service-worker.html" --ld-file="static/json-ld.json"
